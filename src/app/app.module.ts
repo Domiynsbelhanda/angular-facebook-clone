@@ -19,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {MatCardModule} from "@angular/material/card";
 import {MaterialModule} from "./shared/material.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {MaterialModule} from "./shared/material.module";
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
