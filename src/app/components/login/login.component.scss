@@ -84,6 +84,30 @@
           }
         } // Fin Login Form
 
+        a {
+          text-decoration: none;
+          color: $primary-button-color;
+          text-align: center;
+          border-bottom: 1px solid lightgray;
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+          cursor: pointer;
+        }
+
+        .create-account {
+          background-color: $success-button-color;
+          display: inline-block;
+          align-self: center;
+          outline: none;
+          border: none;
+          border-radius: 7px;
+          padding: 15px 30px;
+          color: white;
+          font-size: 18px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+
 
       }
     }
