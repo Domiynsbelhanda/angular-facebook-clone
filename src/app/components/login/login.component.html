@@ -8,7 +8,7 @@
 
     <div class="login__header__right">
       <mat-card class="login__header__right__card">
-        <mat-card-content>
+        <mat-card-content class="login__header__right__card__content">
           <form #form="ngForm" class="login-form" (ngSubmit)="login(form)">
             <input type="text" name="email" ngModel placeholder="Email address or phone number" required>
             <input type="password" name="password" ngModel placeholder="Password" required>
@@ -17,6 +17,7 @@
                     class="login-button"
                     [disabled]="form.invalid || form.pending"
             >
+              Sign In
             </button>
           </form>
           <a href="#">Forgotten account?</a>
@@ -28,7 +29,7 @@
       <p class="tagline">Create a Page for a celebrity, brand or business.</p>
     </div>
   </header>
-  
+
   <footer>
     <img src="assets/footer_crop.jpg" alt="footer">
   </footer>

@@ -38,4 +38,54 @@
       width: 500px;
     }
   } // Left Ends Here
+
+  &__right {
+    &__card {
+      height: 380px;
+      width: 400px;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+
+
+      &__content {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+
+        .login-form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          input {
+            padding: 20px;
+            outline: none;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+
+            &::placeholder {
+              font-size: 16px;
+              font-weight: normal;
+            }
+          }
+
+          .login-button {
+            background-color: $primary-button-color;
+            padding: 15px;
+            outline: none;
+            border: none;
+            border-radius: 7px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            cursor: pointer
+          }
+        } // Fin Login Form
+
+
+      }
+    }
+  }
 }
