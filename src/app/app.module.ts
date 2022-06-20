@@ -20,12 +20,14 @@ import { RegisterComponent } from './components/register/register.component';
 import {MatCardModule} from "@angular/material/card";
 import {MaterialModule} from "./shared/material.module";
 import {FormsModule} from "@angular/forms";
+import {HomeComponent} from "./components/home/home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
