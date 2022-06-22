@@ -3,7 +3,7 @@
     <div class="home__header__left">
       <img src="assets/fb-head.jpg" alt="logo" mat-card-avatar>
       <div class="input">
-        <mat-icon aria-hidden="false">search_outline</mat-icon>
+        <mat-icon class="search-icon" aria-hidden="false">search_outline</mat-icon>
         <form>
           <input type="text" placeholder="Search Facebook">
         </form>
@@ -81,9 +81,9 @@
       <div class="inside">
         <div class="user-avatar">
           <img
-            alt=""
+            alt="youness-dominique"
             mat-card-avatar
-            src="">
+            src="https://media-exp2.licdn.com/dms/image/C5603AQFnnRyqLb8QYw/profile-displayphoto-shrink_800_800/0/1649679897237?e=1661385600&v=beta&t=9UoP2U58ABpVngaq8s50SaJGIx1ipSReVX3GIsU5vN0">
           <span class="name">NAME HERE</span>
         </div>
         <div>
@@ -122,6 +122,76 @@
         </div>
 
       </div>
+    </div>
+
+    <div class="home__body__contentMiddle">
+
+      <div class="home__body__contentMiddle__top">
+        <!--IMAGE CARDS-->
+        <mat-card *ngFor="let i of images" class="image-card">
+          <img alt="bg"
+               class="bg" src="{{ i }}">
+          <mat-card-content>
+            <img
+              alt="avatar"
+              class="avatar"
+              src="https://media-exp2.licdn.com/dms/image/C5603AQFnnRyqLb8QYw/profile-displayphoto-shrink_800_800/0/1649679897237?e=1661385600&v=beta&t=9UoP2U58ABpVngaq8s50SaJGIx1ipSReVX3GIsU5vN0">
+            <span class="card-name">Dominique Youness</span>
+          </mat-card-content>
+        </mat-card>
+
+      </div>
+
+      <div class="home__body__contentMiddle__center">
+        <mat-card class="post-message">
+          <mat-card-header class="post-message-header"
+                           style="padding-bottom: 20px; border-bottom: 1px solid lightgray;">
+            <img
+              alt=""
+              mat-card-avatar
+              [src]="">
+            <form #form="ngForm" (ngSubmit)="postMessage(form)">
+              <input class="on-your-mind" name="message" ngModel placeholder="What's on your mind?" type="text">
+              <button style="display: none;" type="submit"></button>
+            </form>
+
+          </mat-card-header>
+          <mat-card-content class="card-body">
+            <div>
+              <mat-icon color="accent">videocam</mat-icon>
+              <span>Live Video</span>
+            </div>
+
+            <div>
+              <mat-icon color="primary">photo_album</mat-icon>
+              <span>Photo/Video</span>
+            </div>
+
+            <div>
+              <mat-icon color="warn">mood</mat-icon>
+              <span>Feeling/Activity</span>
+            </div>
+          </mat-card-content>
+        </mat-card>
+
+        <!--Loop Through All Posts From Database and Display-->
+<!--        <mat-card *ngFor="let p of posts" class="posts">-->
+<!--          <mat-card-header class="posts__header">-->
+<!--            <img alt="{{ p?.title }}" mat-card-avatar [src]="p?.avatar">-->
+<!--            <div class="posts__header__right">-->
+<!--              <span>{{ p?.time?.seconds * 1000 | date:'shortTime' }}</span>-->
+<!--              <h3>{{ p?.title }}</h3>-->
+<!--            </div>-->
+<!--          </mat-card-header>-->
+<!--          <mat-card-content class="posts__body">-->
+<!--            <p>{{ p?.message }}</p>-->
+<!--          </mat-card-content>-->
+<!--        </mat-card>-->
+
+
+      </div>
+
+
     </div>
 
     <div class="home__body__feedRight">
