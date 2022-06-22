@@ -11,7 +11,7 @@
     </div>
 
     <div class="home__header__middle">
-      <div>
+      <div class="active">
         <mat-icon class="mat-18">home</mat-icon>
       </div>
 
@@ -32,8 +32,48 @@
       </div>
     </div>
 
-    <div class="home__header__right"></div>
+    <div class="home__header__right">
+      <div>
+        <img src="" alt="avatar" mat-card-avatar>
+        <span class="name"> MY NAME</span>
+      </div>
+
+      <div>
+        <mat-icon class="mat-18">add</mat-icon>
+      </div>
+
+      <div>
+        <mat-icon
+          class="mat-18"
+          matBadge="4"
+          matBadgeColor="primary"
+          matBadgeOverlap="false"
+          matBadgePosition="above after"
+        >forum</mat-icon>
+      </div>
+
+      <div>
+        <mat-icon
+          class="mat-18"
+          matBadge="3"
+          matBadgeColor="warn"
+          matBadgeOverlap="false"
+          matBadgePosition="above after"
+        >notifications</mat-icon>
+      </div>
+
+    </div>
+
+    <mat-icon [matMenuTriggerFor]="menu" class="mat-18">expand_more</mat-icon>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon class="mat-18">exit_to_app</mat-icon> LogOut
+      </button>
+    </mat-menu>
   </div>
+
+<!--  Ends Header-->
 
   <div class="home__body"></div>
 </div>
