@@ -21,7 +21,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MaterialModule} from "./shared/material.module";
 import {FormsModule} from "@angular/forms";
 import {HomeComponent} from "./components/home/home.component";
-import {AngularFireModule} from "@angular/fire/compat";
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import {AngularFireModule} from "@angular/fire/compat";
     provideStorage(() => getStorage())
   ],
   providers: [
-    ScreenTrackingService,UserTrackingService
+    ScreenTrackingService,UserTrackingService,
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase }
   ],
   bootstrap: [AppComponent]
 })
