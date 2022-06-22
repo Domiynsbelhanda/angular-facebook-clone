@@ -21,6 +21,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MaterialModule} from "./shared/material.module";
 import {FormsModule} from "@angular/forms";
 import {HomeComponent} from "./components/home/home.component";
+import {AngularFireModule} from "@angular/fire/compat";
 
 @NgModule({
   declarations: [
