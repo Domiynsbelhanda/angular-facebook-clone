@@ -4,7 +4,7 @@ import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {AuthService} from "./auth.service";
-import firebase from "firebase/compat";
+import firebase from "firebase/compat/app";
 import User = firebase.User;
 
 @Injectable({
