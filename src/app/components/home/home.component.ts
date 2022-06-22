@@ -54,4 +54,8 @@ export class HomeComponent implements OnInit {
     );
     form.resetForm();
   }
+
+  logout(): void {
+    this.authService.Logout();
+  }
 }
